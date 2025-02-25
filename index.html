@@ -44,6 +44,8 @@
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+
+  <script src="//code.tidio.co/8c2s4hv9fe45muzfh961jimijtf4y0yr.js" async></script>
   
     <!--====== PRELOADER PART START ======-->
 
@@ -594,6 +596,97 @@
     </script>
     
     <!--====== FOOTER PART ENDS ======-->
+
+
+
+
+    <!--====== AI CHATBOT PART STARTS ======-->
+
+
+   
+
+<!-- 
+    Chatbot Button 
+    <div id="chatbot-btn" class="chatbot-button">
+        <i class="lni lni-comments"></i>
+    </div>
+
+    Chatbot Window 
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>AI Assistant</h4>
+            <span id="close-chatbot">&times;</span>
+        </div>
+        <div class="chatbot-body">
+            <p>Hello! How can I help you today?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Type a message...">
+            <button class="send-btn">&#10148;</button>
+        </div>
+    </div>
+-->
+
+
+
+
+<script>
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chatbotButton = document.getElementById('chatbot-btn'); // Chatbot button
+
+    // Function to update button color based on the current hash
+    function updateButtonColor() {
+        if (window.location.hash === '#home') {
+            chatbotButton.classList.add('alt-color'); // Add the alternative color class
+        } else {
+            chatbotButton.classList.remove('alt-color'); // Remove the alternative color class
+        }
+    }
+
+    // Check the hash on page load
+    updateButtonColor();
+
+    // Listen for hash changes (e.g., when navigating to #home or other pages)
+    window.addEventListener('hashchange', updateButtonColor);
+
+    // Open Tidio chat when the button is clicked
+    chatbotButton.addEventListener('click', function() {
+        // Check if Tidio API is available
+        if (typeof tidioChatApi !== 'undefined') {
+            tidioChatApi.open(); // Open the Tidio chat window
+        } else {
+            console.error('Tidio chat API is not available.');
+        }
+    });
+});
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+    <!--====== AI CHATBOT PART ENDS ======-->
+
+
+
+
+
+
+
+
+
+
 
     <!--====== PART START ======-->
 

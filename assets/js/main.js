@@ -185,9 +185,4 @@ $(function () {
     wow.init();
 
 
-
-
-
-
-
 });
